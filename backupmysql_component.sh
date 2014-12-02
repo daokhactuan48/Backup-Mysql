@@ -30,6 +30,7 @@ mysqldump --opt -u root information_schema | gzip > $filenameinformation_schema
 ccrypt $filenameinformation_schema -KAdmin123
 # backup database performance_schema
 mysqldump --opt -u root performance_schema | gzip > $filenameperformance_schema
+ccrypt $filenameperformance_schema -KAdmin123
 # backup database mysql
 mysqldump --opt -u root mysql | gzip > $filenamemysql
 ccrypt $filenamemysql -KAdmin123
